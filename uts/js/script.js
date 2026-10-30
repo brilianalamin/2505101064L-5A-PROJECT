@@ -1,0 +1,1 @@
+console.log("Proyek UTS Pemrograman Web Dasar berhasil dimuat.");
