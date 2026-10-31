@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Portfolio Pendidikan</title>
+
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            color: #263445;
+            line-height: 1.6;
+        }
+
+        
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+       
+        header {
+            background-color: #102a43;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #38bdf8;
+        }
+
+       
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #2563eb;
+        }
+
+        
+        .banner {
+            min-height: 300px;
+            margin: 25px 0;
+            border-radius: 15px;
+            background:
+                linear-gradient(90deg, rgba(15, 23, 42, 0.9),
+                rgba(15, 23, 42, 0.25)),
+                linear-gradient(135deg, #164e63, #2563eb, #38bdf8);
+            display: flex;
+            align-items: center;
+            padding: 45px;
+            color: white;
+            overflow: hidden;
+        }
+
+        .banner-content {
+            max-width: 550px;
+        }
+
+        .banner h1 {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .banner p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .banner-button {
+            display: inline-block;
+            background-color: #38bdf8;
+            color: #102a43;
+            padding: 11px 22px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .banner-button:hover {
+            background-color: white;
+            transform: translateY(-3px);
+        }
+
+        
+        .main-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+       
+        aside {
+            background-color: #102a43;
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        aside h2 {
+            color: #38bdf8;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        aside p {
+            color: #dbeafe;
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .sidebar-info {
+            border-top: 1px solid #49657e;
+            padding-top: 15px;
+            font-size: 14px;
+        }
+
+        .sidebar-info p {
+            margin-bottom: 8px;
+        }
+
+       
+        .content {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .content h2 {
+            font-size: 25px;
+            margin-bottom: 8px;
+            color: #102a43;
+        }
+
+        .content-description {
+            color: #64748b;
+            margin-bottom: 22px;
+        }
+
+       
+        .education-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .education-card {
+            background-color: #eff6ff;
+            border: 2px solid #dbeafe;
+            border-radius: 10px;
+            padding: 20px 10px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .education-card:hover {
+            background-color: #2563eb;
+            border-color: #2563eb;
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(37,99,235,0.2);
+        }
+
+        .education-card h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .education-card p {
+            font-size: 12px;
+        }
+
+        
+        article {
+            background-color: #f8fafc;
+            padding: 20px;
+            border-left: 4px solid #38bdf8;
+            border-radius: 6px;
+        }
+
+        article h3 {
+            color: #102a43;
+            margin-bottom: 8px;
+        }
+
+        article p {
+            color: #475569;
+            font-size: 14px;
+        }
+
+       
+        footer {
+            background-color: #102a43;
+            color: white;
+            padding: 22px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+       
+        @media (max-width: 850px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .education-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* RESPONSIVE UNTUK HP */
+        @media (max-width: 550px) {
+            .header-content {
+                flex-direction: column;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .banner {
+                padding: 25px;
+                min-height: 250px;
+            }
+
+            .banner h1 {
+                font-size: 28px;
+            }
+
+            .education-list {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .content {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    
+    <header>
+        <div class="container header-content">
+
+            <div class="logo">
+                EDU<span>PORT</span>
+            </div>
+
+            
+            <nav>
+                <ul>
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#tentang">Tentang</a></li>
+                    <li><a href="#pendidikan">Pendidikan</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main class="container">
+
+        
+        <section class="banner" id="beranda">
+            <div class="banner-content">
+                <h1>WEB PORTFOLIO</h1>
+
+                <p>
+                    Membangun masa depan melalui pendidikan.
+                    Temukan informasi dan jenjang pendidikan
+                    yang tepat untuk perjalanan belajar Anda.
+                </p>
+
+                <a href="#pendidikan" class="banner-button">
+                    Jelajahi Sekarang
+                </a>
+            </div>
+        </section>
+
+        
+        <div class="main-layout">
+
+            
+            <aside id="tentang">
+                <h2>Tentang Kami</h2>
+
+                <p>
+                    EduPort merupakan halaman informasi pendidikan
+                    yang menyediakan gambaran berbagai jenjang
+                    pendidikan mulai dari sekolah dasar hingga
+                    perguruan tinggi.
+                </p>
+
+                <div class="sidebar-info">
+                    <p><strong>Visi:</strong></p>
+                    <p>
+                        Menjadi sumber informasi pendidikan
+                        yang mudah diakses dan bermanfaat.
+                    </p>
+
+                    <p><strong>Misi:</strong></p>
+                    <p>
+                        Mendukung masyarakat untuk memperoleh
+                        informasi pendidikan yang berkualitas.
+                    </p>
+                </div>
+            </aside>
+
+            
+            <section class="content" id="pendidikan">
+
+                <h2>Jenjang Pendidikan</h2>
+
+                <p class="content-description">
+                    Pilih jenjang pendidikan untuk mengenal
+                    tahapan pendidikan di Indonesia.
+                </p>
+
+                
+                <div class="education-list">
+
+                    <div class="education-card">
+                        <h3>SD</h3>
+                        <p>Sekolah Dasar</p>
+                    </div>
+
+                    <div class="education-card">
+                        <h3>SMP</h3>
+                        <p>Sekolah Menengah Pertama</p>
+                    </div>
+
+                    <div class="education-card">
+                        <h3>SMA</h3>
+                        <p>Sekolah Menengah Atas</p>
+                    </div>
+
+                    <div class="education-card">
+                        <h3>S1</h3>
+                        <p>Perguruan Tinggi</p>
+                    </div>
+
+                </div>
+
+                
+                <article>
+                    <h3>Kisah Sekolahku</h3>
+
+                    <p>
+                        Pendidikan merupakan salah satu hal penting
+                        dalam kehidupan. Melalui pendidikan, setiap
+                        individu dapat mengembangkan pengetahuan,
+                        keterampilan, kreativitas, dan kemampuan
+                        untuk meraih cita-cita.
+                    </p>
+
+                    <p>
+                        Perjalanan pendidikan dimulai dari sekolah
+                        dasar, sekolah menengah, hingga perguruan
+                        tinggi. Setiap jenjang memiliki peran penting
+                        dalam membentuk masa depan.
+                    </p>
+                </article>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    
+    <footer id="kontak">
+        <p>
+            &copy; 2026 EduPort - Website Portfolio Pendidikan.
+            All Rights Reserved.
+        </p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Klinik Sehat</title>
+</head>
+
+<body>
+
+    <h1>FORMULIR PENDAFTARAN PASIEN</h1>
+    <h2>Klinik Sehat</h2>
+
+    <hr>
+
+    <form action="#" method="get">
+
+        <!-- Data Pasien -->
+        <h3>Data Pasien</h3>
+
+        <label for="nama">Nama Lengkap:</label><br>
+        <input type="text" id="nama" name="nama"
+               placeholder="Masukkan nama lengkap" required>
+        <br><br>
+
+        <label for="nik">Nomor Identitas (NIK):</label><br>
+        <input type="text" id="nik" name="nik"
+               placeholder="Masukkan NIK" maxlength="16"
+               inputmode="numeric" required>
+        <br><br>
+
+        <label for="tanggal_lahir">Tanggal Lahir:</label><br>
+        <input type="date" id="tanggal_lahir"
+               name="tanggal_lahir" required>
+        <br><br>
+
+        <label>Jenis Kelamin:</label><br>
+
+        <input type="radio" id="laki-laki"
+               name="jenis_kelamin" value="Laki-laki" required>
+        <label for="laki-laki">Laki-laki</label>
+
+        <input type="radio" id="perempuan"
+               name="jenis_kelamin" value="Perempuan">
+        <label for="perempuan">Perempuan</label>
+        <br><br>
+
+        <label for="alamat">Alamat:</label><br>
+        <textarea id="alamat" name="alamat"
+                  rows="4" cols="40"
+                  placeholder="Masukkan alamat lengkap"
+                  required></textarea>
+        <br><br>
+
+        <label for="telepon">Nomor Telepon:</label><br>
+        <input type="tel" id="telepon" name="telepon"
+               placeholder="Contoh: 081234567890" required>
+        <br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"
+               placeholder="Masukkan alamat email">
+        <br><br>
+
+        <!-- Informasi Kunjungan -->
+        <h3>Informasi Kunjungan</h3>
+
+        <label for="tanggal_kunjungan">Tanggal Kunjungan:</label><br>
+        <input type="date" id="tanggal_kunjungan"
+               name="tanggal_kunjungan" required>
+        <br><br>
+
+        <label for="poli">Poli Tujuan:</label><br>
+        <select id="poli" name="poli" required>
+            <option value="">-- Pilih Poli --</option>
+            <option value="Umum">Poli Umum</option>
+            <option value="Gigi">Poli Gigi</option>
+            <option value="Anak">Poli Anak</option>
+            <option value="KIA">Poli Kesehatan Ibu dan Anak</option>
+        </select>
+        <br><br>
+
+        <label for="dokter">Pilihan Dokter:</label><br>
+        <select id="dokter" name="dokter">
+            <option value="">-- Pilih Dokter --</option>
+            <option value="Dokter Umum">Dokter Umum</option>
+            <option value="Dokter Gigi">Dokter Gigi</option>
+            <option value="Dokter Anak">Dokter Anak</option>
+        </select>
+        <br><br>
+
+        <!-- Keluhan Pasien -->
+        <h3>Keluhan Pasien</h3>
+
+        <label for="keluhan">Keluhan Utama:</label><br>
+        <textarea id="keluhan" name="keluhan"
+                  rows="5" cols="40"
+                  placeholder="Tuliskan keluhan yang dirasakan"
+                  required></textarea>
+        <br><br>
+
+        <label for="lama_sakit">Lama Keluhan:</label><br>
+        <select id="lama_sakit" name="lama_sakit">
+            <option value="">-- Pilih Lama Keluhan --</option>
+            <option value="1 hari">1 hari</option>
+            <option value="2-3 hari">2–3 hari</option>
+            <option value="4-7 hari">4–7 hari</option>
+            <option value="Lebih dari 7 hari">Lebih dari 7 hari</option>
+        </select>
+        <br><br>
+
+        <label for="alergi">Riwayat Alergi Obat:</label><br>
+        <input type="radio" id="alergi_ya"
+               name="alergi" value="Ya">
+        <label for="alergi_ya">Ya</label>
+
+        <input type="radio" id="alergi_tidak"
+               name="alergi" value="Tidak">
+        <label for="alergi_tidak">Tidak</label>
+        <br><br>
+
+        <label for="detail_alergi">Jika Ya, Sebutkan:</label><br>
+        <textarea id="detail_alergi" name="detail_alergi"
+                  rows="3" cols="40"
+                  placeholder="Tuliskan alergi obat jika ada"></textarea>
+        <br><br>
+
+        <!-- Persetujuan -->
+        <input type="checkbox" id="persetujuan"
+               name="persetujuan" value="Setuju" required>
+        <label for="persetujuan">
+            Saya menyatakan bahwa data yang diisi benar.
+        </label>
+        <br><br>
+
+        <!-- Tombol -->
+        <input type="submit" value="Daftar Pasien">
+        <input type="reset" value="Hapus Formulir">
+
+    </form>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Klinik Sehat</p>
+    </footer>
+
+</body>
+
+</html>

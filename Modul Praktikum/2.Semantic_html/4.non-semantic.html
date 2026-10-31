@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non Semantic HTML</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        #header {
+            background-color: #3498db;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        #sidebar {
+            background-color: #f39c12;
+            color: white;
+            width: 25%;
+            min-height: 200px;
+            padding: 20px;
+            box-sizing: border-box;
+            float: left;
+        }
+
+        #content {
+            background-color: white;
+            width: 75%;
+            min-height: 200px;
+            padding: 20px;
+            box-sizing: border-box;
+            float: left;
+        }
+
+        .post {
+            background-color: #d5f5e3;
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+
+        #footer {
+            background-color: #34495e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header">
+        <h1>Website Non Semantic</h1>
+        <p>Contoh Struktur HTML Menggunakan DIV</p>
+    </div>
+
+    <div id="sidebar">
+        <h3>Sidebar</h3>
+        <p>Menu Navigasi</p>
+        <p>Beranda</p>
+        <p>Artikel</p>
+    </div>
+
+    <div id="content">
+        <h2>Content</h2>
+
+        <div class="post">
+            <h3>Artikel Pertama</h3>
+            <p>Ini adalah contoh isi artikel menggunakan elemen div.</p>
+        </div>
+    </div>
+
+    <div id="footer">
+        <p>Copyright 2026 - Website Non Semantic</p>
+    </div>
+
+</body>
+</html>
